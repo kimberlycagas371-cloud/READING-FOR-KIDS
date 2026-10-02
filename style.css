@@ -1,0 +1,129 @@
+/* ---------- Base ---------- */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #ffecd2, #fcb69f);
+  font-family: "Comic Sans MS", "Trebuchet MS", sans-serif;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+}
+
+/* ---------- Card ---------- */
+.card {
+  width: 94%;
+  max-width: 520px;
+  margin: 16px 0;
+  padding: 24px;
+  text-align: center;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+h1 { margin: 0 0 12px; color: #e17055; }
+h2 { margin: 0; color: #6c5ce7; min-height: 1em; }
+
+/* ---------- Level tabs ---------- */
+.levels {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.levels button {
+  padding: 8px 16px;
+  font-size: 16px;
+  color: #636e72;
+  background: #dfe6e9;
+  border-radius: 14px;
+}
+
+.levels button.active {
+  color: #fff;
+  background: #6c5ce7;
+}
+
+/* ---------- Progress ---------- */
+.progress {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+}
+
+/* ---------- Reading area ---------- */
+.emoji { font-size: 80px; margin: 8px 0; }
+
+.text {
+  margin: 12px 0 20px;
+  font-size: 34px;
+  line-height: 1.8;
+  color: #2d3436;
+}
+
+.word {
+  display: inline-block;
+  padding: 0 6px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.word:hover  { background: #dfe6e9; }
+.word.active { background: #ffeaa7; }
+.word.good   { color: #00b894; }
+.word.bad    { color: #d63031; text-decoration: underline wavy; }
+
+/* ---------- Buttons ---------- */
+.controls {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.controls button {
+  padding: 12px 18px;
+  font-size: 20px;
+  color: #fff;
+  background: #00b894;
+  border-radius: 16px;
+}
+
+#slow { background: #fdcb6e; color: #2d3436; }
+#slow[aria-pressed="true"] { background: #e17055; color: #fff; }
+#mic  { background: #e84393; }
+#mic.listening { animation: pulse 1s infinite; }
+
+@keyframes pulse {
+  50% { transform: scale(1.08); }
+}
+
+#feedback {
+  min-height: 34px;
+  margin: 16px 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background: #dfe6e9;
+  border-radius: 14px;
+}
+
+.hint { margin: 16px 0 0; color: #636e72; font-size: 14px; }

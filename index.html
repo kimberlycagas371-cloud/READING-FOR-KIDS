@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Read Along</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>📚 Read Along</h1>
+
+    <!-- Level tabs -->
+    <nav class="levels" id="levels">
+      <button data-level="words" class="active">Words</button>
+      <button data-level="sentences">Sentences</button>
+      <button data-level="stories">Stories</button>
+    </nav>
+
+    <!-- Progress -->
+    <div class="progress">
+      <span id="position"></span>
+      <span>⭐ <b id="stars">0</b></span>
+    </div>
+
+    <!-- Reading area -->
+    <div class="emoji" id="emoji"></div>
+    <h2 id="title"></h2>
+    <p class="text" id="text"></p>
+
+    <!-- Buttons -->
+    <div class="controls">
+      <button id="listen">🔊 Listen</button>
+      <button id="slow" aria-pressed="false">🐢 Slow</button>
+      <button id="mic">🎤 I will read</button>
+    </div>
+
+    <div id="feedback"></div>
+
+    <div class="nav">
+      <button id="prev">⬅ Back</button>
+      <button id="next">Next ➡</button>
+    </div>
+
+    <p class="hint">Tap any word to hear it.</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
